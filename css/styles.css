@@ -517,14 +517,10 @@ p {
   justify-content: center;
   align-items: center;
 
-  transition: background-color var(--transition), border var(--transition),
+  transition: background-color var(--transition), border-color var(--transition),
     box-shadow var(--transition), color var(--transition);
 }
-.nav-buttons-list-item {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .nav-buttons-form:hover,
 .nav-buttons-form:focus {
@@ -583,7 +579,7 @@ p {
   transition: transform var(--transition);
 }
 
-.galery-link:hover .hover-text {
+.galery-link:hover .hover-text, .galery-link:focus .hover-text {
   transform: translateY(0%);
 }
 .image-title {
