@@ -521,7 +521,6 @@ p {
     box-shadow var(--transition), color var(--transition);
 }
 
-}
 .nav-buttons-form:hover,
 .nav-buttons-form:focus {
   border: 1px solid transparent;
@@ -579,7 +578,8 @@ p {
   transition: transform var(--transition);
 }
 
-.galery-link:hover .hover-text, .galery-link:focus .hover-text {
+.galery-link:hover .hover-text,
+.galery-link:focus .hover-text {
   transform: translateY(0%);
 }
 .image-title {
