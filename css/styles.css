@@ -619,7 +619,7 @@ p {
 
   height: 100%;
   width: 100%;
-tra
+
   background-color: rgba(46, 47, 66, 0.4);
 
   transition: opacity var(--transition), visibility var(--transition);
