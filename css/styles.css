@@ -370,8 +370,7 @@ p {
   align-items: center;
   justify-content: center;
 }
-.social-items {
-}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -397,8 +396,6 @@ p {
   | Clients
   |============================
 */
-.clients {
-}
 .clients-title {
   font-size: 36px;
   font-weight: 700;
@@ -657,8 +654,6 @@ p {
   border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--cornflower);
-}
-.modal-icon {
 }
 
 .is-hidden {
