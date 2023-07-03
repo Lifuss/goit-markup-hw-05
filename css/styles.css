@@ -153,12 +153,13 @@ p {
 }
 .page-holder {
   position: relative;
+  color: var(--hover-color);
 }
 .page-holder::after {
   content: '';
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   display: block;
@@ -519,6 +520,12 @@ p {
   transition: background-color var(--transition), border var(--transition),
     box-shadow var(--transition), color var(--transition);
 }
+.nav-buttons-list-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .nav-buttons-form:hover,
 .nav-buttons-form:focus {
   border: 1px solid transparent;
@@ -546,6 +553,7 @@ p {
 }
 .galery-link:hover,
 .galery-link:focus {
+  transform: translateY(0%);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -554,19 +562,18 @@ p {
   position: relative;
   overflow: hidden;
 }
-.image-descr {
+.hover-text {
   position: absolute;
   left: 0;
-  right: 0;
+  top: 0;
+  transform: translateY(100%);
 
-  display: flex;
-  justify-content: center;
-  padding: 40px 32px 164px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
 
+  padding: 40px 32px;
   width: 100%;
   height: 100%;
 
@@ -576,8 +583,8 @@ p {
   transition: transform var(--transition);
 }
 
-.galery-link:hover .image-descr {
-  transform: translateY(-100%);
+.galery-link:hover .hover-text {
+  transform: translateY(0%);
 }
 .image-title {
   font-weight: 500;
@@ -629,12 +636,14 @@ p {
   transform: translate(-50%, -50%);
 
   width: 408px;
-  height: 584px;
+  min-height: 584px;
 
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  transition: transform var(--transition);
 }
 
 .modal-btn {
@@ -645,17 +654,28 @@ p {
   width: 24px;
   height: 24px;
 
+  padding: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   cursor: pointer;
 
-  border-radius: 24px;
+  border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--cornflower);
+  transition: background-color var(--transition), border var(--transition);
 }
-
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--hover-color);
+  border: none;
+  fill: var(--color-on-blue-theme);
+}
+.modal-icon {
+  transition: fill var(--transition);
+}
 .is-hidden {
   opacity: 0;
   pointer-events: none;
